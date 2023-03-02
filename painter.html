@@ -46,7 +46,15 @@
                 oops = oops + 1
                 alert('Sorry')
             }
+            if(oops==10){
+                alertButton()
+            }
             out.innerHTML = "Right count: " + good + " Wrong count: " + oops
+        }
+        function alertButton(){
+            alert("sorry, ran out of guesses")
+            oops=60
+            out.innerHTML="wrong count: "+oops
         }
     </script>
 
