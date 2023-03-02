@@ -44,34 +44,31 @@
     </script>
 
 
-<div class="container">
-    <img src="Abelia.jpg" height="100" width="100" onclick="selectImage()" id="getimage">
+    <div class="container">
+        <img src="Abelia.jpg" height="100" width="100" onclick="selectImage()" id="getimage">
     </div>
-   
-   <script>
-       var useimage=1
-       function selectImage()
-       {
-           out=document.getElementById("getimage")
-           switch(useimage)
-           {
-               case 1:
-                   out.src="Abelia.jpg"
-                   useimage+=1
-                   break
-               case 2:
-                   out.src="Maackia.jpg"
-                   useimage+=1
-                   break
-               case 3:
-               out.src="neilla.jpg"
-                   useimage+=1
-                   break
-   
-           }
-   
-           if(useimage==4)
-           {
-               useimage=1
-           }
-       }
+
+    <script>
+        var useimage = 1
+        function selectImage() {
+            out = document.getElementById("getimage")
+            switch (useimage) {
+                case 1:
+                    out.src = "Abelia.jpg"
+                    useimage += 1
+                    break
+                case 2:
+                    out.src = "Maackia.jpg"
+                    useimage += 1
+                    break
+                case 3:
+                    out.src = "neillia.jpg"
+                    useimage += 1
+                    break
+
+            }
+
+            if (useimage == 4) {
+                useimage = 1
+            }
+        }
