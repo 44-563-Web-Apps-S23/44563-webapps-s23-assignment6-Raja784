@@ -1,71 +1,76 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Painters webpage</title>
-    </head>
+
+<head>
+    <title>Painters webpage</title>
+</head>
+
 <body>
 
-<h2>Painter entry Raja</h2>
-<form>
-    <label for="form_painter"> The hidden painter name </label>
-    <input type ="password" id="password" name="form_painter" min=10 max=50 step=2 value="Monet"> <br>
+    <h2>Painter entry Raja</h2>
+    <form>
+        <label for="form_painter"> The hidden painter name </label>
+        <input type="password" id="password" name="form_painter" min=10 max=50 step=2 value="Monet"> <br>
 
-    <label for="form_check">Guess the painter</label>
-    <input type ="text" id="check" name="form_check" min=10 max=50 step=2> <br>
+        <label for="form_check">Guess the painter</label>
+        <input type="text" id="check" name="form_check" min=10 max=50 step=2> <br>
 
-    <input type="button" onclick="checkPainter()" value="Check the guess">
+        <input type="button" onclick="checkPainter()" value="Check the guess">
 
-</form>
-<p id="result">Result </p>
+    </form>
+    <p id="result">Result </p>
 
 
-<script> 
-var good=0
-var oops=0
+    <script>
+        var good = 0
+        var oops = 0
 
-function checkPainter(){
-    console.log("Getting form values")
-    password = document.getElementById("password").value
-    check = document.getElementById("check").value
-    confirmed = confirm("Are these the values? "+password+" and "+check)
-    
-    out = document.getElementById("result")
-    if(password==check){
-        alert("You got it right")
-        good=good+1
-    } else {
-        oops=oops+1
-        alert('Sorry')
-    }
-    out.innerHTML ="Right count: " +good+" Wrong count: "+oops
-}
-</script>
+        function checkPainter() {
+            console.log("Getting form values")
+            password = document.getElementById("password").value
+            check = document.getElementById("check").value
+            confirmed = confirm("Are these the values? " + password + " and " + check)
+
+            out = document.getElementById("result")
+            if (password == check) {
+                alert("You got it right")
+                good = good + 1
+            } else {
+                oops = oops + 1
+                alert('Sorry')
+            }
+            out.innerHTML = "Right count: " + good + " Wrong count: " + oops
+        }
+    </script>
 
 </body>
+
 </html>
 
 
 <div class="container">
-    <img src="Abelia1.jpg" height="100"width="100" onclick="selectImage()"id="getimage">
+    <img src="Abelia1.jpg" height="100" width="100" onclick="selectImage()" id="getimage">
 </div>
 <script>
-    var useimage=1
-    function selectImage(){
-    out=document.getElementbyId("getimage")
-    switch(useimage){
-        case 1:
-            out,src="Abelia.jpg"
-            useimage+=1
-            break
-        case 2
-            out.src="neillia.jpg"  
-            useimage+=1
-            break
-        case 3
-            out.src="Maackia.jpg"
-            useimage+=1
-            break  
-    }
-
+    var useimage = 1
+    function selectImage() {
+        out = document.getElementbyId("getimage")
+        switch (useimage) {
+            case 1:
+                out, src = "Abelia.jpg"
+                useimage +=1
+                break
+            case 2
+            out.src = "neillia.jpg"
+                useimage +=1
+                break
+            case 3
+            out.src = "Maackia.jpg"
+                useimage +=1
+                break
+        }
+        If(useimage == 4){
+            useimage = 1
+        }
     }
 </script>
