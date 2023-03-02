@@ -43,3 +43,29 @@ function checkPainter(){
 
 </body>
 </html>
+
+
+<div class="container">
+    <img src="Abelia1.jpg" height="100"width="100" onclick="selectImage()"id="getimage">
+</div>
+<script>
+    var useimage=1
+    function selectImage(){
+    out=document.getElementbyId("getimage")
+    switch(useimage){
+        case 1:
+            out,src="Abelia.jpg"
+            useimage+=1
+            break
+        case 2
+            out.src="neillia.jpg"  
+            useimage+=1
+            break
+        case 3
+            out.src="Maackia.jpg"
+            useimage+=1
+            break  
+    }
+
+    }
+</script>
